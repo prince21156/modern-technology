@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Tech Logo">
+        <h1>Modern Tech</h1>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Innovating the Future</h2>
+    <p>Discover the latest in technology and gadgets.</p>
+    <button onclick="explore()">Explore</button>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h3>High-Tech Devices</h3>
+        <p>Cutting-edge gadgets for modern needs.</p>
+    </div>
+    <div class="feature">
+        <h3>Smart Solutions</h3>
+        <p>Smart technology for a smarter world.</p>
+    </div>
+    <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>Reliable assistance whenever you need it.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Modern Tech. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- Products Section -->
+<section id="products" class="products">
+    <h2>Our Products</h2>
+
+    <div class="product-container">
+        <div class="product-card">
+            <h3>Smart Devices</h3>
+            <p>Latest smart gadgets for your daily needs.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>AI Solutions</h3>
+            <p>Innovative AI-powered technology.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Cloud Tech</h3>
+            <p>Secure and scalable cloud systems.</p>
+        </div>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="searchBtn">
+                🔍
+            </button>
+        </section>
+        <script>
+            const searchInput = document.getElementById("searchInput");
+            const searchBtn = document.getElementById("searchBtn");
+            const products = document.querySelectorAll(".product-card");
+            
+            // Function to filter products
+            function filterProducts() {
+                const query = searchInput.value.toLowerCase();
+            
+                products.forEach(product => {
+                    const title = product.querySelector("h3").innerText.toLowerCase();
+                    if (title.includes(query)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            }
+            
+            // Search on button click
+            searchBtn.addEventListener("click", filterProducts);
+            
+            // Search on Enter key press
+            searchInput.addEventListener("keypress", function(e) {
+                if (e.key === "Enter") {
+                    filterProducts();
+                }
+            });
+            </script>
+               
+    
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        Modern Tech is dedicated to delivering cutting-edge technology
+        solutions that shape the future.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: prince@moderntech.com</p>
+    <p>Phone: +250798013095</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 Modern Tech. All rights reserved.</p>
+</footer>
+
+}
+<script>
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            if (this.hash !== "") {
+                e.preventDefault();
+                document.querySelector(this.hash)
+                    .scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+    </script>
+    <header>
+        <h1>Modern Tech</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h2>Innovating the Future</h2>
+        <p>Discover the latest in technology and gadgets.</p>
+        <button>Explore</button>
+    </section>
+    }
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <h3>Smart Devices</h3>
+                <p>Modern gadgets for smart living.</p>
+            </div>
+            <div class="product-card">
+                <h3>AI Solutions</h3>
+                <p>Advanced artificial intelligence systems.</p>
+            </div>
+            <div class="product-card">
+                <h3>Cloud Tech</h3>
+                <p>Secure and scalable cloud services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+            Modern Tech provides innovative solutions for the future.
+    
+    }
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@moderntech.com</p>
+        <p>Phone: +250798013095</p>
+    </section>
+    
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href"))
+                    .scrollIntoView({ behavior: "smooth" });
+            });
+        });
+        </script>
+<script>
+    let btn = document.getElementById("topBtn");
+    
+    window.onscroll = function () {
+        btn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    
+    btn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    </script>
+<script>
+    let btn = document.getElementById("topBtn");
+    
+    window.onscroll = function () {
+        btn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    
+    btn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    </script>
+<form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+
+<!-- This is the header section -->
+<header>
+    /* Styling for the product cards */
+    .product-card {<div class="product-card">
+        <img src="watch.jpg" alt="Smart Watch">
+        <h3>Smart Watch Pro</h3>
+        <p>Advanced smart watch with health tracking.</p>
+        <span class="price">$199</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>br
+    
+    <div class="product-card">
+        <img src="laptop.jpg" alt="Laptop">
+        <h3>Ultra Laptop</h3>
+        <p>High performance laptop for professionals.</p>
+        <span class="price">$899</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>br
+
+
+    <script>
+        document.querySelectorAll(".buy-btn").forEach(button => {
+            button.onclick = () => {
+                alert("Thank you for your interest! Checkout coming soon.");
+            };
+        });
+
+
+        </script>
+      <div class="product-card">
+        <img src="smartwatch.jpg" alt="Smart Watch">
+        <h3>Smart Watch Pro</h3>
+        <p>Track your health and notifications with style.</p>
+        <span class="price">$199</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>br
+
+
+    
+    <div class="product-card">
+        <img src="laptop.jpg" alt="Ultra Laptop">
+        <h3>Ultra Laptop X</h3>
+        <p>High performance laptop for professionals and gamers.</p>
+        <span class="price">$899</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+
+    
+    <div class="product-card">
+        <img src="drone.jpg" alt="Drone">
+        <h3>Drone Explorer</h3>
+        <p>Fly high with advanced drone technology and camera.</p>
+        <span class="price">$499</span>
+        <button class="buy-btn">Buy Now</button>
+    </div><break></break>
+
+
+    
+    <div class="product-card">
+        <img src="vrheadset.jpg" alt="VR Headset">
+        <h3>VR Headset Elite</h3>
+        <p>Experience immersive virtual reality gaming and movies.</p>
+        <span class="price">$299</span>
+        <button class="buy-btn">Buy Now</button>
+    </div><break></break>
+
+
+    
+    <div class="product-card">
+        <img src="smartphone.jpg" alt="Smartphone">
+        <h3>Smartphone Z10</h3>
+        <p>Fast, sleek, and loaded with the latest technology.</p>
+        <span class="price">$699</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>break>
+
+
+    
+    <div class="product-card">
+        <img src="earbuds.jpg" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>High-quality sound with long battery life.</p>
+        <span class="price">$129</span>
+        <button class="buy-btn">Buy Now</button>
+    </div>break>
+    
+
+
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button id="searchBtn">
+            🔍
+        </button>
+    </section>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+        const products = document.querySelectorAll(".product-card");
+        
+        // Function to filter products
+        function filterProducts() {
+            const query = searchInput.value.toLowerCase();
+        
+            products.forEach(product => {
+                const title = product.querySelector("h3").innerText.toLowerCase();
+                if (title.includes(query)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+        
+        // Search on button click
+        searchBtn.addEventListener("click", filterProducts);
+        
+        // Search on Enter key press
+        searchInput.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                filterProducts();
+            }<break>
+        });
+        </script>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="smartwatch.jpg" alt="Smart Watch Pro">
+        </divbr
+
+
+        <div class="product-info">
+            <h3>Smart Watch Pro</h3>
+            <p>Advanced smartwatch with health tracking and notifications.</p>
+            <span class="price">$199</span>
+            <button class="buy-btn">Buy Now</button>
+        </div>br
+
+
+    </div>
+    
+    <div class="product-card">
+        <span class="badge">New</span>
+        ...
+    </div>
+    
+    <section id="products" class="products">
+        <h2 class="section-title">Our Technology Products</h2>
+    
+        <div class="product-container">
+            <!-- Example Product Card -->
+            <div class="product-card">
+                <img src="smartwatch.jpg" alt="Smart Watch Pro">
+                <h3>Smart Watch Pro</h3>
+                <p>Advanced smartwatch with health tracking.</p>
+                <span class="price">$199</span>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+
+            <!-- Add more product cards here -->
+        </div>
+    </section>
+    <h3 class="section-subtitle">Explore our latest gadgets and devices</h3>
+    
+    }
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Modern Technology</h1>
+            <p>Discover the latest gadgets, devices, and tech innovations all in one place.</p>
+            <button id="exploreBtn">Explore Products</button>
+        </div>
+    <script>
+        const exploreBtn = document.getElementById("exploreBtn");
+        
+        exploreBtn.addEventListener("click", function() {
+            document.querySelector("#products").scrollIntoView({ behavior: "smooth" });
+        });
+        </script>
+  <h1 id="heroText"></h1>
+  <script>
+    const text = "Welcome to Modern Technology";
+    let i = 0;
+    const heroText = document.getElementById("heroText");
+    
+    function typeWriter() {
+        if(i < text.length){
+            heroText.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    
+    typeWriter();
+    </script>
+<section id="about" class="about">
+    <div class="about-container">
+        <h2 class="section-title">About Modern Technology</h2>
+        <p>
+            Modern Technology is dedicated to bringing you the latest innovations in gadgets,
+            devices, and smart solutions. Our mission is to provide cutting-edge technology
+            that enhances your lifestyle and keeps you ahead in the digital world.
+        </p>
+        <p>
+            From smart devices and AI solutions to cloud services, we aim to deliver products
+            that are reliable, innovative, and designed for the future.
+        </p>
+        <button id="learnMoreBtn">Learn More</button>
+    </div>
+</section>
+}
+<script>
+    const learnMoreBtn = document.getElementById("learnMoreBtn");
+    
+    learnMoreBtn.addEventListener("click", function() {
+        document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+    });
+    </script>
+  <div class="about-image">
+    <img src="tech-team.jpg" alt="Tech Team">
+</div>
+
+<div class="about-image">
+    <img src="tech-team.jpg" alt="Tech Team">
+</div>
+<section id="products">
+    <h2 class="section-title">Our Technology Products</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="smartwatch.jpg" alt="Smart Watch Pro">
+            <h3>Smart Watch Pro</h3>
+            <p>Advanced smartwatch with health tracking.</p>
+            <span class="price">$199</span>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="laptop.jpg" alt="Ultra Laptop">
+            <h3>Ultra Laptop X</h3>
+            <p>High performance laptop for professionals and gamers.</p>
+            <span class="price">$899</span>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- Add more product cards here -->
+    </div>
+</section>
+
+    
+        
+                    
+                                               
